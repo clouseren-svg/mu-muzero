@@ -160,13 +160,13 @@ Training progresses through automatically managed difficulty stages:
 
 ## Citation
 
-If you use μ-MuZero in your research, please cite:
+If you use this work in your research, please cite:
 
 ```bibtex
-@phdthesis{ren2026embodied,
-  title={Embodied Intelligence for Autonomous Optical Microrobotic Manipulation in Minimally Invasive Surgery},
+@article{ren2026micromuzero,
+  title={{\mu}-MuZero: Safety-Constrained Stochastic MuZero for Autonomous Optical Micromanipulation},
   author={Ren, Yunxiao},
-  school={Imperial College London},
+  journal={arXiv preprint},
   year={2026}
 }
 ```
@@ -184,7 +184,6 @@ MIT License — see [LICENSE](LICENSE) for details.
 - **Author**: Yunxiao Ren
 - **Affiliation**: Hamlyn Centre for Robotic Surgery, Imperial College London
 - **Email**: yunxiao.ren@imperial.ac.uk
-- **Supervisors**: Dr. Dandan Zhang, Dr. Salzitsa Anastasova-Ivanova, Dr. Benny Lo
 
 ---
 
