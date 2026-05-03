@@ -2,6 +2,30 @@
 
 **μ-MuZero** (pronounced "micro-MuZero") is a safety-constrained, stochastic variant of the MuZero algorithm, specifically designed for autonomous optical micromanipulation in minimally invasive surgery.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+---
+
+## 📌 Data Confidentiality Notice
+
+> **⚠️ IMPORTANT: This repository contains only the algorithmic implementation and documentation. No experimental data, patient records, or proprietary datasets are included.**
+>
+> All microscopy images, cell trajectory data, optical force measurements, and clinical trial data used in this research are subject to strict confidentiality agreements with:
+> - **Imperial College London** (Data Protection Policy)
+> - **Hamlyn Centre for Robotic Surgery** (Research Ethics Approval)
+> - **UK Data Protection Act 2018 / GDPR**
+>
+> ### What is NOT in this repo
+> - ❌ Raw microscopy video recordings
+> - ❌ Cell position tracking data
+> - ❌ Patient-identifiable information
+> - ❌ FDTD/T-matrix simulation datasets (proprietary)
+> - ❌ Trained model checkpoints containing data embeddings
+> - ❌ Phototoxicity measurement logs from biological experiments
+>
+> ### Data Access
+> Researchers interested in collaborating or accessing anonymised benchmark data should contact the authors directly. All data sharing requires a signed **Data Processing Agreement (DPA)** and ethics approval.
+
 ---
 
 ## Why μ-MuZero?
@@ -61,6 +85,7 @@ mu-muzero/
 │   └── (paper drafts, design notes)
 ├── assets/
 │   └── (figures, diagrams)
+├── .gitignore             # Excludes all data and sensitive files
 └── README.md
 ```
 
@@ -70,7 +95,7 @@ mu-muzero/
 
 ```bash
 # Clone repository
-git clone https://github.com/yunxiao-ren/mu-muzero.git
+git clone https://github.com/clouseren-svg/mu-muzero.git
 cd mu-muzero
 
 # Install dependencies
@@ -164,7 +189,7 @@ If you use μ-MuZero in your research, please cite:
 
 ## License
 
-MIT License — see LICENSE for details.
+MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
@@ -174,3 +199,9 @@ MIT License — see LICENSE for details.
 - **Affiliation**: Hamlyn Centre for Robotic Surgery, Imperial College London
 - **Email**: yunxiao.ren@imperial.ac.uk
 - **Supervisors**: Dr. Dandan Zhang, Dr. Salzitsa Anastasova-Ivanova, Dr. Benny Lo
+
+---
+
+## Acknowledgements
+
+This work was supported by the [Hamlyn Centre for Robotic Surgery](https://www.imperial.ac.uk/hamlyn-centre/) at Imperial College London. All biological experiments were conducted under Imperial College Research Ethics Committee approval. We thank the clinical collaborators for their guidance on defining meaningful surgical task benchmarks.
