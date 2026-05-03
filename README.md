@@ -77,14 +77,7 @@ mu-muzero/
 │   ├── mcts.py            # Safety-constrained Monte Carlo Tree Search
 │   ├── environment.py     # Physics-informed digital twin
 │   ├── mu_muzero.py       # Main agent interface
-│   ├── train.py           # Training & evaluation script
-│   └── ppt_generator.py   # Slide deck generator
-├── slides/
-│   └── mu_muzero_algorithm.pptx  # 13-slide presentation
-├── docs/
-│   └── (paper drafts, design notes)
-├── assets/
-│   └── (figures, diagrams)
+│   └── train.py           # Training & evaluation script
 ├── .gitignore             # Excludes all data and sensitive files
 └── README.md
 ```
@@ -99,7 +92,7 @@ git clone https://github.com/clouseren-svg/mu-muzero.git
 cd mu-muzero
 
 # Install dependencies
-pip install torch numpy python-pptx
+pip install torch numpy
 
 # Optional: for GPU acceleration
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
@@ -121,13 +114,6 @@ python src/train.py --mode train --total_steps 2000000 --save_dir checkpoints/
 python src/train.py --mode eval \
     --checkpoint checkpoints/mu_muzero_final.pt \
     --eval_episodes 100
-```
-
-### Generate Presentation
-
-```bash
-python src/ppt_generator.py
-# Output: slides/mu_muzero_algorithm.pptx
 ```
 
 ---
