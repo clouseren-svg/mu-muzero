@@ -80,5 +80,9 @@ ENV/
 *.toc
 *.xdv
 
-# Keep structure but ignore output PDFs if needed
-# *.pdf
+# Generated learning materials (PPT, PDF, formula assets)
+*.pdf
+slides/
+assets/
+mu_muzero_guide*.tex
+学习该项目/
