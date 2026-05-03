@@ -183,7 +183,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 - **Author**: Yunxiao Ren
 - **Affiliation**: Hamlyn Centre for Robotic Surgery, Imperial College London
-- **Email**: yunxiao.ren@imperial.ac.uk
+- **Email**: clouseren@gmail.com
 
 ---
 
