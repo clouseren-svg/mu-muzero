@@ -107,7 +107,8 @@ class DynamicsNetwork(nn.Module):
         self.reward_head = nn.Linear(hidden_dim, reward_support_size)
         
         # Learned state normalization (as in MuZero)
-        self.state_norm = nn.BatchNorm1d(latent_dim, affine=False)
+        # Using LayerNorm instead of BatchNorm1d to support batch_size=1 during inference
+        self.state_norm = nn.LayerNorm(latent_dim)
     
     def forward(self, latent: torch.Tensor, action: torch.Tensor) -> Tuple[torch.Tensor, ...]:
         x = torch.cat([latent, action], dim=-1)

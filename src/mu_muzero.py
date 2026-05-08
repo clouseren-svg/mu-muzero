@@ -5,8 +5,9 @@ Entry point for training and inference.
 """
 
 import torch
+import torch.nn.functional as F
 import numpy as np
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Optional
 from collections import deque
 
 from config import MuMuZeroConfig
@@ -255,5 +256,3 @@ class MuMuZeroAgent:
         print(f"Checkpoint loaded from {path}")
 
 
-import torch.nn.functional as F
-from typing import Optional

@@ -16,12 +16,18 @@ class MuMuZeroConfig:
     workspace_size: Tuple[float, float, float] = (100.0, 100.0, 50.0)  # μm
     num_traps: int = 3
     max_laser_power: float = 100.0  # mW (hard safety constraint)
-    phototoxicity_budget: float = 5000.0  # mW·ms per episode (soft constraint)
+    laser_power: float = 50.0  # mW per trap (typical optical tweezer)
+    phototoxicity_budget: float = 500000.0  # mW·ms per episode (~10 s @ 50 mW)
     
-    # Micro-physics
+    # Micro-physics (realistic values for optical tweezers)
+    k_B: float = 1.380649e-23  # J/K, Boltzmann constant
     viscosity: float = 1.0e-3  # Pa·s (water at 20°C)
-    temperature: float = 293.15  # K
-    brownian_noise_scale: float = 0.1  # μm / sqrt(ms)
+    temperature: float = 293.15  # K (20°C)
+    robot_radius: float = 1.0  # μm (1 μm radius = 2 μm diameter polystyrene bead)
+    trap_stiffness: float = 2.0  # pN/μm (optical trap spring constant, ~0.5-50 pN/μm typical)
+    max_trap_displacement: float = 2.0  # μm per control step
+    dt: float = 0.02  # s (20 ms control timestep)
+    brownian_noise_scale: float = -1.0  # computed from Einstein-Smoluchowski if < 0
     
     # Neural Networks
     latent_dim: int = 256
